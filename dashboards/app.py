@@ -1,6 +1,7 @@
 """Streamlit Real-Time Payment Fraud Monitoring Center & Live Stream Simulator."""
 
 import json
+import sys
 import time
 import uuid
 from pathlib import Path
@@ -19,8 +20,25 @@ st.set_page_config(
 
 # Constants & Paths
 ROOT_DIR = Path(__file__).resolve().parent.parent
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
+
 MODEL_DIR = ROOT_DIR / "models"
 API_URL = "http://localhost:8000"
+
+
+@st.cache_resource
+def ensure_models_loaded():
+    """Ensure trained models and preprocessor exist; auto-bootstrap on cloud startup if absent."""
+    prep_path = MODEL_DIR / "preprocessor.joblib"
+    ens_path = MODEL_DIR / "ensemble_config.joblib"
+    if not prep_path.exists() or not ens_path.exists():
+        from pipeline.train_pipeline import run_training_pipeline
+        run_training_pipeline(num_samples=10000, save_sample_data=False)
+    return True
+
+
+ensure_models_loaded()
 
 # Custom CSS for fintech terminal aesthetic
 st.markdown("""
