@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv/
+.env
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# ML & Deep Learning Artifacts
+*.pkl
+*.joblib
+*.pt
+*.pth
+*.bin
+*.onnx
+*.h5
+
+# Vector Databases & Storage
+chroma_db/
+.chroma/
+faiss_index/
+
+# MLflow & Tracking
+mlruns/
+mlartifacts/
+
+# Monitoring & Logs
+*.log
+evidently_reports/
+
+# Data Files (Keep samples only)
+data/*.csv
+data/*.parquet
+data/*.pdf
+!data/sample_*
