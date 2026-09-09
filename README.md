@@ -14,7 +14,7 @@
 
 ## 1. Executive Framing & Business Problem
 
-In real-time digital payment processing (UPI, Card-Not-Present, POS transactions), fraud scoring models must evaluate incoming authorization payloads within a strict **30ms SLA window**. 
+In real-time digital payment processing (UPI, Card-Not-Present, POS transactions), fraud scoring models must evaluate incoming authorization payloads within a strict **30ms SLA window**.
 
 Furthermore, real-world financial fraud datasets exhibit **extreme class imbalance** (typically 0.1% to 0.2% positive fraud prevalence), rendering standard machine learning accuracy completely deceptive:
 
@@ -125,8 +125,8 @@ Clocked on standard hardware against a live Redis Docker container:
 
 Calculating rolling aggregations on traditional databases requires executing queries like:
 ```sql
-SELECT COUNT(*), SUM(amount) 
-FROM transactions 
+SELECT COUNT(*), SUM(amount)
+FROM transactions
 WHERE user_id = :uid AND timestamp >= NOW() - INTERVAL '5 minutes';
 ```
 In high-throughput payment processing (10,000+ tx/sec), running disk scans for every card swipe causes disk I/O bottlenecks and breaches the 30ms gateway SLA.

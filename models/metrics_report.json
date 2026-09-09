@@ -47,7 +47,7 @@
       "precision": 1.0,
       "recall": 1.0,
       "f1_score": 1.0,
-      "brier_score": 5e-05,
+      "brier_score": 6e-05,
       "confusion_matrix": {
         "true_negatives": 14968,
         "false_positives": 0,
@@ -58,40 +58,40 @@
       "fraud_prevalence": 0.00213
     },
     "lightgbm": {
-      "pr_auc": 0.992,
-      "roc_auc": 1.0,
-      "threshold": 0.7243,
-      "precision": 1.0,
+      "pr_auc": 0.9378,
+      "roc_auc": 0.9843,
+      "threshold": 0.85,
+      "precision": 0.7045,
       "recall": 0.9688,
-      "f1_score": 0.9841,
-      "brier_score": 0.00015,
+      "f1_score": 0.8158,
+      "brier_score": 0.00094,
       "confusion_matrix": {
-        "true_negatives": 14968,
-        "false_positives": 0,
+        "true_negatives": 14955,
+        "false_positives": 13,
         "false_negatives": 1,
         "true_positives": 31
       },
-      "financial_loss_usd": 250.0,
+      "financial_loss_usd": 406.0,
       "fraud_prevalence": 0.00213,
-      "precision_at_50": 0.64,
-      "precision_at_100": 0.32,
-      "recall_at_95_precision": 0.9688
+      "precision_at_50": 0.62,
+      "precision_at_100": 0.31,
+      "recall_at_95_precision": 0.875
     },
     "hybrid_ensemble": {
-      "pr_auc": 0.9938,
-      "roc_auc": 1.0,
+      "pr_auc": 0.963,
+      "roc_auc": 0.9998,
       "threshold": 0.3,
-      "precision": 0.1495,
+      "precision": 0.1553,
       "recall": 1.0,
-      "f1_score": 0.2602,
-      "brier_score": 0.01038,
+      "f1_score": 0.2689,
+      "brier_score": 0.01106,
       "confusion_matrix": {
-        "true_negatives": 14786,
-        "false_positives": 182,
+        "true_negatives": 14794,
+        "false_positives": 174,
         "false_negatives": 0,
         "true_positives": 32
       },
-      "financial_loss_usd": 2184.0,
+      "financial_loss_usd": 2088.0,
       "fraud_prevalence": 0.00213,
       "precision_at_100": 0.32
     }
@@ -103,19 +103,19 @@
     "hybrid_caught": 50
   },
   "feature_importances": {
-    "ratio_to_avg_amount_24h": 95.0,
-    "tx_sum_amount_past_24h": 53.0,
-    "amount": 44.0,
-    "device_trust_score": 42.0,
-    "distance_from_home_km": 28.0,
-    "distance_from_last_tx_km": 15.0,
-    "tx_count_past_5m": 14.0,
-    "hour_of_day": 11.0,
-    "seconds_since_last_tx": 9.0,
-    "merchant_risk_score": 6.0,
-    "tx_count_past_1h": 4.0,
-    "day_of_week": 2.0,
-    "channel_risk_score": 1.0,
+    "amount": 2.0,
+    "tx_count_past_1h": 2.0,
+    "ratio_to_avg_amount_24h": 2.0,
+    "merchant_risk_score": 1.0,
+    "device_trust_score": 1.0,
+    "distance_from_home_km": 1.0,
+    "hour_of_day": 0.0,
+    "day_of_week": 0.0,
+    "channel_risk_score": 0.0,
+    "distance_from_last_tx_km": 0.0,
+    "seconds_since_last_tx": 0.0,
+    "tx_count_past_5m": 0.0,
+    "tx_sum_amount_past_24h": 0.0,
     "is_international": 0.0
   }
 }

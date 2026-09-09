@@ -81,7 +81,8 @@ class FraudIsolationForest:
                     "random_state": self.random_state,
                 },
             },
-            filepath
+            filepath,
+            compress=3
         )
 
     @classmethod

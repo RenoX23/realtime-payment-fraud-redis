@@ -21,6 +21,7 @@ htmlcov/
 # ML & Deep Learning Artifacts
 *.pkl
 *.joblib
+!models/*.joblib
 *.pt
 *.pth
 *.bin
