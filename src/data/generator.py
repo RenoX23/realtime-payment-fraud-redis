@@ -200,8 +200,7 @@ class TransactionDataGenerator:
 
             # Record
             data.append({
-                "transaction_id": str(uuid.UUID(int=self.rng.integers(0, 2**63))),
-                "transaction_id": str(uuid.UUID(int=int(self.rng.integers(0, 2**63)))),
+                "transaction_id": str(uuid.uuid4()),
                 "user_id": uid,
                 "timestamp": ts,
                 "amount": amount,
