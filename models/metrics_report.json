@@ -81,17 +81,17 @@
       "pr_auc": 0.9938,
       "roc_auc": 1.0,
       "threshold": 0.3,
-      "precision": 0.1448,
+      "precision": 0.1495,
       "recall": 1.0,
-      "f1_score": 0.253,
-      "brier_score": 0.01058,
+      "f1_score": 0.2602,
+      "brier_score": 0.01038,
       "confusion_matrix": {
-        "true_negatives": 14779,
-        "false_positives": 189,
+        "true_negatives": 14786,
+        "false_positives": 182,
         "false_negatives": 0,
         "true_positives": 32
       },
-      "financial_loss_usd": 2268.0,
+      "financial_loss_usd": 2184.0,
       "fraud_prevalence": 0.00213,
       "precision_at_100": 0.32
     }
@@ -105,16 +105,16 @@
   "feature_importances": {
     "ratio_to_avg_amount_24h": 95.0,
     "tx_sum_amount_past_24h": 53.0,
-    "amount": 47.0,
+    "amount": 44.0,
     "device_trust_score": 42.0,
     "distance_from_home_km": 28.0,
     "distance_from_last_tx_km": 15.0,
     "tx_count_past_5m": 14.0,
+    "hour_of_day": 11.0,
     "seconds_since_last_tx": 9.0,
-    "hour_of_day": 7.0,
     "merchant_risk_score": 6.0,
     "tx_count_past_1h": 4.0,
-    "day_of_week": 3.0,
+    "day_of_week": 2.0,
     "channel_risk_score": 1.0,
     "is_international": 0.0
   }

@@ -165,7 +165,7 @@ def run_training_pipeline(
     # Train on normal transactions only
     X_train_normal = X_train[y_train == 0]
     iso_forest = FraudIsolationForest(
-        n_estimators=150,
+        n_estimators=50,
         contamination=0.01,
         random_state=42
     )

@@ -16,7 +16,7 @@ class FraudIsolationForest:
 
     def __init__(
         self,
-        n_estimators: int = 150,
+        n_estimators: int = 50,
         contamination: float = 0.01,
         max_samples: float = 0.8,
         random_state: int = 42
