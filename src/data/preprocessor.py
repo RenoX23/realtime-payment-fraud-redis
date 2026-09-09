@@ -63,21 +63,27 @@ class DataPreprocessor:
 
         return train_df, val_df, test_df
 
-    def fit(self, X: pd.DataFrame) -> "DataPreprocessor":
+    def fit(self, X: Any) -> "DataPreprocessor":
         """Fit scaler on training features only."""
-        features_subset = X[self.feature_names].values
+        if isinstance(X, pd.DataFrame):
+            features_subset = X[self.feature_names].values
+        else:
+            features_subset = np.asarray(X)
         self.scaler.fit(features_subset)
         self.is_fitted = True
         return self
 
-    def transform(self, X: pd.DataFrame) -> np.ndarray:
-        """Transform dataframe features using fitted scaler."""
+    def transform(self, X: Any) -> np.ndarray:
+        """Transform dataframe or ndarray features using fitted scaler."""
         if not self.is_fitted:
             raise ValueError("DataPreprocessor must be fitted before calling transform().")
-        features_subset = X[self.feature_names].values
+        if isinstance(X, pd.DataFrame):
+            features_subset = X[self.feature_names].values
+        else:
+            features_subset = np.asarray(X)
         return self.scaler.transform(features_subset)
 
-    def fit_transform(self, X: pd.DataFrame) -> np.ndarray:
+    def fit_transform(self, X: Any) -> np.ndarray:
         """Fit scaler and transform in one step."""
         return self.fit(X).transform(X)
 
