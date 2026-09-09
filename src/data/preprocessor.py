@@ -30,7 +30,7 @@ MODEL_FEATURE_NAMES = [
 
 class DataPreprocessor:
     """Production preprocessing pipeline ensuring zero temporal leakage.
-    
+
     Fits scaling parameters strictly on training historical partitions and
     transforms both batch dataframes and single real-time feature vectors.
     """

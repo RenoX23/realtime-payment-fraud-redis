@@ -33,7 +33,7 @@ CHANNEL_RISK_PRIORS = {
 
 class TransactionDataGenerator:
     """Generates synthetic high-fidelity financial payment transactions.
-    
+
     Models realistic customer spending behavior, merchant category distributions,
     temporal dynamics, and low-prevalence (~0.15%) multi-vector fraud attacks.
     """
